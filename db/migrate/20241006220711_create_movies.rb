@@ -11,6 +11,7 @@ class CreateMovies < ActiveRecord::Migration[7.2]
       t.string :series
       t.integer :series_order_number
       t.timestamps
+      t.string :slug
     end
   end
 end

@@ -1,0 +1,10 @@
+h1 = @series.title 
+p = @series.description 
+h3 Movies in this Series:
+ul
+  - @series.movies.each do |movie| 
+    h2 
+      = movie.series_order_number.to_s + " " + movie.title
+
+    p = movie.description 
+

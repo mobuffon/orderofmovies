@@ -1,16 +1,16 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+# Create Series records with manual IDs
+series_data = [
+  { id: 1, title: "Harry Potter", description: "The Harry Potter series follows the life and adventures of a young wizard, Harry Potter, as he learns about magic and battles dark forces.", slug: "harry-potter" },
+  { id: 2, title: "Fantastic Beasts", description: "The Fantastic Beasts series explores the magical world before the events of Harry Potter, focusing on Newt Scamander and the rise of Grindelwald.", slug: "fantastic-beasts" }
+]
 
+# Insert series data into the Series table
+series_data.each do |series|
+  Series.create!(id: series[:id], title: series[:title], description: series[:description], slug: series[:slug])
+end
 
-# Harry Potter Universe Seed Data
-movies = [
+# Create Movies records with the correct series_id references
+movies_data = [
   {
     title: "Harry Potter and the Philosopher's Stone",
     release_date: Date.new(2001, 11, 16),
@@ -18,7 +18,7 @@ movies = [
     description: "The first installment of the Harry Potter series introduces us to the magical world and the Boy Who Lived.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 1,
-    series: "Harry Potter",
+    series_id: 1,
     series_order_number: 1
   },
   {
@@ -28,7 +28,7 @@ movies = [
     description: "The second installment in the series where Harry faces the heir of Slytherin.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 2,
-    series: "Harry Potter",
+    series_id: 1,
     series_order_number: 2
   },
   {
@@ -38,7 +38,7 @@ movies = [
     description: "Harry's third year at Hogwarts brings unexpected revelations about his family's history.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 3,
-    series: "Harry Potter",
+    series_id: 1,
     series_order_number: 3
   },
   {
@@ -48,7 +48,7 @@ movies = [
     description: "The fourth movie introduces the Triwizard Tournament and marks the return of Voldemort.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 4,
-    series: "Harry Potter",
+    series_id: 1,
     series_order_number: 4
   },
   {
@@ -58,7 +58,7 @@ movies = [
     description: "Harry's fifth year at Hogwarts focuses on forming Dumbledore's Army and the struggle against the Ministry of Magic.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 5,
-    series: "Harry Potter",
+    series_id: 1,
     series_order_number: 5
   },
   {
@@ -68,7 +68,7 @@ movies = [
     description: "The sixth movie delves into the past of Voldemort and Harry's quest to stop him.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 6,
-    series: "Harry Potter",
+    series_id: 1,
     series_order_number: 6
   },
   {
@@ -78,7 +78,7 @@ movies = [
     description: "The first part of the final movie follows the trio as they search for the Horcruxes.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 7,
-    series: "Harry Potter",
+    series_id: 1,
     series_order_number: 7
   },
   {
@@ -88,7 +88,7 @@ movies = [
     description: "The concluding movie of the Harry Potter series ends with the Battle of Hogwarts.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 8,
-    series: "Harry Potter",
+    series_id: 1,
     series_order_number: 8
   },
   {
@@ -98,7 +98,7 @@ movies = [
     description: "The first movie in the Fantastic Beasts series introduces the magical world of 1920s America.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 9,
-    series: "Fantastic Beasts",
+    series_id: 2,
     series_order_number: 1
   },
   {
@@ -108,7 +108,7 @@ movies = [
     description: "The second movie in the Fantastic Beasts series continues the story of Grindelwald's rise.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 10,
-    series: "Fantastic Beasts",
+    series_id: 2,
     series_order_number: 2
   },
   {
@@ -118,12 +118,12 @@ movies = [
     description: "The third movie in the Fantastic Beasts series focuses on Dumbledore's conflict with Grindelwald.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 11,
-    series: "Fantastic Beasts",
+    series_id: 2,
     series_order_number: 3
   }
 ]
 
-# Insert data into the Movie model
-movies.each do |movie|
+# Insert movies data into the Movies table
+movies_data.each do |movie|
   Movie.create!(movie)
 end
