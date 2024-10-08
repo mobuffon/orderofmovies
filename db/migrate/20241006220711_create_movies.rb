@@ -3,10 +3,13 @@ class CreateMovies < ActiveRecord::Migration[7.2]
     create_table :movies do |t|
       t.string :title
       t.text :body
-      t.text :desctiption
+      t.text :description
       t.string :image
       t.date :release_date
-
+      t.string :franchise
+      t.integer :franchise_order_number
+      t.string :series
+      t.integer :series_order_number
       t.timestamps
     end
   end
