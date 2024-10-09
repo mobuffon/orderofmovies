@@ -15,3 +15,20 @@
  */
  @import "bootstrap";
  @import "_variables";
+
+.heading-container {
+padding-left: 200px;
+padding-right: 200px;
+
+}
+
+@media (max-width: 992px) {
+.heading-container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+}
+
+body {
+    background-color: lightgray;
+}

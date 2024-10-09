@@ -1,10 +1,25 @@
-h1 = @series.title 
-p = @series.description 
-h3 Movies in this Series:
-ul
-  - @series.movies.each do |movie| 
-    h2 
-      = movie.series_order_number.to_s + " " + movie.title
+.heading-container.mt-3.mb-3
+  h1  = @series.title 
+  p = @series.description 
 
-    p = movie.description 
+.container
+  .card.bg-secondary.text-white.mb-4
+          /.card-header.text-center.dflex Author: J.K. Rowling
+          .card-body.d-flex.flex-wrap.justify-content-center
+            - @series.movies.each_with_index do |s, index| 
+              / Movie Card 1
+              .card.text-dark.m-3 style="width: 18rem;"
+                .position-relative
+                  img.card-img-top.movie-image.position-relative src="#{s.image}" alt="#{s.title}"
+                  span.badge.badge-primary.position-absolute style="top: 10px; left: 10px; font-size: 1rem;" = index + 1
+                .card-body.d-flex.flex-column.align-items-left
+                  h5.card-title = s.title
+                  a.mb-1 data-toggle="collapse" data-target="#movie1" aria-expanded="false" aria-controls="movie1" Explore More
+                  .collapse.toggle-content id="movie1"
+                    p.card-text.mt-2.text-left = s.description
+                    a.btn.btn-info.btn-sm href="#" Go to Movie
 
+  / Bootstrap and jQuery JS
+  script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"
+  script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"

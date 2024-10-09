@@ -1,3 +1,5 @@
+
+
 # Create Series records with manual IDs
 series_data = [
   { id: 1, title: "Harry Potter", description: "The Harry Potter series follows the life and adventures of a young wizard, Harry Potter, as he learns about magic and battles dark forces.", slug: "harry-potter" },
@@ -18,6 +20,7 @@ movies_data = [
     description: "The first installment of the Harry Potter series introduces us to the magical world and the Boy Who Lived.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 1,
+    image: "https://web.static.nowtv.com/images/NOWTV_2021/UK/harrypotter/landingpagemovies/moviesgrid/newnames/01_HP_Film1_1.jpg?downsize=3840:*&output-format=webp&output-quality=75",
     series_id: 1,
     series_order_number: 1
   },
@@ -28,6 +31,8 @@ movies_data = [
     description: "The second installment in the series where Harry faces the heir of Slytherin.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 2,
+    
+    image: "https://web.static.nowtv.com/images/NOWTV_2021/UK/harrypotter/landingpagemovies/moviesgrid/newnames/02_HP_Film2_2.jpg?downsize=3840:*&output-format=webp&output-quality=75",
     series_id: 1,
     series_order_number: 2
   },
@@ -38,6 +43,7 @@ movies_data = [
     description: "Harry's third year at Hogwarts brings unexpected revelations about his family's history.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 3,
+    image: "https://web.static.nowtv.com/images/NOWTV_2021/UK/harrypotter/landingpagemovies/moviesgrid/newnames/03_HP_Film3_3.jpg?downsize=3840:*&output-format=webp&output-quality=75",
     series_id: 1,
     series_order_number: 3
   },
@@ -48,6 +54,7 @@ movies_data = [
     description: "The fourth movie introduces the Triwizard Tournament and marks the return of Voldemort.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 4,
+    image: "https://web.static.nowtv.com/images/NOWTV_2021/UK/harrypotter/landingpagemovies/moviesgrid/newnames/04_HP_Film4_4.jpg?downsize=3840:*&output-format=webp&output-quality=75",
     series_id: 1,
     series_order_number: 4
   },
@@ -58,6 +65,8 @@ movies_data = [
     description: "Harry's fifth year at Hogwarts focuses on forming Dumbledore's Army and the struggle against the Ministry of Magic.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 5,
+    
+    image: "https://web.static.nowtv.com/images/NOWTV_2021/UK/harrypotter/landingpagemovies/moviesgrid/newnames/05_HP_Film5_5.jpg?downsize=3840:*&output-format=webp&output-quality=75",
     series_id: 1,
     series_order_number: 5
   },
@@ -67,6 +76,7 @@ movies_data = [
     body: "Harry discovers a mysterious book and learns more about Voldemort's dark past.",
     description: "The sixth movie delves into the past of Voldemort and Harry's quest to stop him.",
     franchise: "Harry Potter Universe",
+    image: "https://web.static.nowtv.com/images/NOWTV_2021/UK/harrypotter/landingpagemovies/moviesgrid/newnames/06_HP_Film6_6.jpg?downsize=3840:*&output-format=webp&output-quality=75",
     franchise_order_number: 6,
     series_id: 1,
     series_order_number: 6
@@ -78,6 +88,7 @@ movies_data = [
     description: "The first part of the final movie follows the trio as they search for the Horcruxes.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 7,
+    image: "https://web.static.nowtv.com/images/NOWTV_2021/UK/harrypotter/landingpagemovies/moviesgrid/newnames/07_HP_Film7_7.jpg?downsize=3840:*&output-format=webp&output-quality=75",
     series_id: 1,
     series_order_number: 7
   },
@@ -88,6 +99,7 @@ movies_data = [
     description: "The concluding movie of the Harry Potter series ends with the Battle of Hogwarts.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 8,
+    image: "https://web.static.nowtv.com/images/NOWTV_2021/UK/harrypotter/landingpagemovies/moviesgrid/newnames/08_HP_Film8_8_.jpg?downsize=3840:*&output-format=webp&output-quality=75",
     series_id: 1,
     series_order_number: 8
   },
@@ -98,6 +110,7 @@ movies_data = [
     description: "The first movie in the Fantastic Beasts series introduces the magical world of 1920s America.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 9,
+    image: "https://web.static.nowtv.com/images/NOWTV_2021/UK/harrypotter/landingpagemovies/moviesgrid/newnames/09_FB_Film9_9.jpg?downsize=3840:*&output-format=webp&output-quality=75",
     series_id: 2,
     series_order_number: 1
   },
@@ -108,6 +121,7 @@ movies_data = [
     description: "The second movie in the Fantastic Beasts series continues the story of Grindelwald's rise.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 10,
+    image: "https://web.static.nowtv.com/images/NOWTV_2021/UK/harrypotter/landingpagemovies/moviesgrid/newnames/10_FB_Film10_10.jpg?downsize=3840:*&output-format=webp&output-quality=75",
     series_id: 2,
     series_order_number: 2
   },
@@ -118,6 +132,7 @@ movies_data = [
     description: "The third movie in the Fantastic Beasts series focuses on Dumbledore's conflict with Grindelwald.",
     franchise: "Harry Potter Universe",
     franchise_order_number: 11,
+    image: "https://web.static.nowtv.com/images/NOWTV_2023/Design_assets/CINEMA/splitpanel_16x9_without_TA/split-panel-slim-with-TA-mobile-300x450-fantastic-beasts.jpg?downsize=3840:*&output-format=webp&output-quality=75",
     series_id: 2,
     series_order_number: 3
   }
